@@ -39,6 +39,8 @@ def talker():
         msg.right_en = int(w[1]*10**8)
         rospy.loginfo(msg)
         pub.publish(msg)
+        pos.x = 0
+        pos.y = 0
         pub2.publish(pos)
         r.sleep()
 
